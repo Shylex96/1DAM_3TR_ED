@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PASSWORD</title>
+</head>
+<body id="bodyClear">
+    <hr>
+    <h1>Write a Password.</h1>
+    
+    <button style="margin-left: 5%;" onclick="passFunction()" id="btnPass">Password</button>
+    <p style="font-size: 0.00000001em; margin-left: 5.2%;">Console has the password.</p>
+    <hr>
+
+    <script>
+        console.log("Password is: 'js'")
+    </script>
+
+    <script>
+        function passFunction() {
+
+            let pass = prompt("Enter Password:");
+
+            if (pass == null) {
+                document.write("<hr>");
+                document.write("<h1>You have to write a password.</h1>")
+                document.write("<hr>");
+
+            } else if (pass != "js") {
+
+                document.write("<hr>");
+                document.write("<h1>Wrong Password.</h1>")
+                let btnRetry = document.createElement("Button");
+                let btnName = document.createTextNode("Retry");
+                btnRetry.setAttribute("id", "btnOne");
+
+                let btnLeft = "5%";
+                let btnHeight = "2em";
+                let btnWidth = "4em";
+                btnRetry.style.marginLeft = btnLeft;
+                btnRetry.style.height = btnHeight;
+                btnRetry.style.width = btnWidth;
+                
+                btnRetry.appendChild(btnName);
+                document.body.appendChild(btnRetry);
+                document.write("<hr>");
+
+                //document.clear();
+                btnRetry.addEventListener("click", passFunction);
+
+            }else {
+                //document.getElementById("bodyClear").innerHTML = '';
+                
+                //document.getElementsById("btnOne").style.display = "none";
+                /*
+                document.getElementById("hrOff").style.display = "none";
+                document.getElementById("h1Off").style.display = "none";
+                */
+                document.write("<hr>");
+                document.write("<h1>Correct Password.</h1>")
+                document.write("<hr>");
+                //document.getElementById("password").innerHTML = "Contraseña correcta.";
+            }
+        }
+    </script>
+</body>
+</html>

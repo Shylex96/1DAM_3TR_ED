@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Example 1</title>
+</head>
+<body>
+
+    <h1 id="nombrePersona"></h1>
+
+    <script>
+        function myFunction() {
+            let persona = prompt("Ingresa tu nombre:");
+
+            if (persona != null) {
+            document.getElementById("nombrePersona").innerHTML =
+            "Hola " + persona + "! Bienvenido/a a mi página :)<hr>";
+            }
+        }
+        
+    </script>
+
+    <ul>
+        <h1 style="margin-left: -0.5%;">JavaScript</h1>
+            <li>
+                <p>Texto escrito en html.</p>
+            </li>
+            <li>
+                <script>
+                    document.write("<p>Texto escrito en javascript</p>");
+                    console.log("Probando la consola de la página");
+                </script>
+                </li>
+                <li>
+                <p>Más texto escrito en html.</p>
+            </li>
+    </ul>
+
+    <hr>
+    <button style="margin-left: 2%; margin-top: 1%;" onclick="myFunction()">Escribe tu nombre</button>
+
+        
+
+    <!--<script language="javascript" type="text/javascript"> 
+        document.
+    </script>-->
+    <script src="./functionExample.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Exercise 2</title>
+</head>
+<body>
+    
+    <h1>Ejercicios Intermedios</h1>
+
+    <label>Euros: </label>
+    <input type="number" id="euros">
+    <br>
+    <label>Bitcoins: </label>
+    <input type="number" id="bitcoins">
+    <br>
+    <button onclick="mostrarConversion()">Aceptar</button>
+    <button onclick="limpiarConversion()">Limpiar</button>
+
+    <script src="./exercise2.js"></script>
+</body>
+</html>
+
+
+
+
+<!--
+    <h1>Conversor de euros a bitcoins</h1>
+    <form>
+        <label>Cantidad de euros:</label>
+        <input type="number" id="euros" />
+        <br />
+        <label>Cantidad de bitcoins:</label>
+        <input type="number" id="bitcoins" />
+        <br />
+        <button type="button" onclick="convertir()">Convertir</button>
+        <button type="button" onclick="limpiar()">Limpiar</button>
+    </form>
+    <div id="resultado"></div>
+    <script>
+        function convertir() {
+        const euros = document.getElementById("euros").value;
+        const bitcoins = document.getElementById("bitcoins").value;
+        let resultado = "";
+        if (euros && !bitcoins) {
+            resultado = euros * 0.000022;
+            resultado = resultado.toFixed(2);
+            resultado = `El resultado de la conversión es: ${resultado} bitcoins`;
+        } else if (!euros && bitcoins) {
+            resultado = bitcoins * 45689.19;
+            resultado = resultado.toFixed(2);
+            resultado = `El resultado de la conversión es: ${resultado} euros`;
+        } else {
+            resultado = "Debe ingresar una cantidad para convertir";
+        }
+        document.getElementById("resultado").innerHTML = resultado;
+        }
+
+        function limpiar() {
+        document.getElementById("euros").value = "";
+        document.getElementById("bitcoins").value = "";
+        document.getElementById("resultado").innerHTML = "";
+        }
+    </script>
+-->

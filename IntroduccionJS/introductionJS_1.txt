@@ -1,0 +1,81 @@
+JavaScript es un lenguaje denominado de alto nivel. Esto quiere decir que gracias a un intérprete necesitamos únicamente dar
+instrucciones por encima de lo que queremos hacer. Lo que quiere decir que el intérprete recoge lo que le decimos y lo traduce
+al ordenador (Procesador). Todo lo contrario de lo que sería "C" o "C++".
+
+El código siempre va entre etiquetas <script></script> en el HTML. En el propio archivo JavaScript esto no es necesario.
+Si queremos escribirlo en un fichero externo se pondrá <script src="ruta.js"></script>
+
+En JS los comentarios de una línea son con //
+En JS los comentarios multilínea son con /**/
+Variables: var, let, const. <--- Dependerá del scope.
+
+-----------------------------------------------------------------------------------------------------
+Algunos ejemplos de función flecha:
+-----------------------------------------------------------------------------------------------------
+
+// Función tradicional:
+
+function (a){
+  return a + 100;
+}
+
+// Desglose de la función flecha:
+
+// 1. Elimina la palabra "function" y coloca la flecha entre el argumento y el corchete de apertura.
+(a) => {
+  return a + 100;
+}
+
+// 2. Quita los corchetes del cuerpo y la palabra "return" — el return está implícito.
+(a) => a + 100;
+
+// 3. Suprime los paréntesis de los argumentos
+a => a + 100;
+
+-----------------------------------------------------------------------------------------------------
+
+
+// Función tradicional:
+function (a, b){
+  return a + b + 100;
+}
+
+// Función flecha:
+(a, b) => a + b + 100;
+
+// Función tradicional (sin argumentos):
+let a = 4;
+let b = 2;
+function (){
+  return a + b + 100;
+}
+
+// Función flecha (sin argumentos):
+let a = 4;
+let b = 2;
+() => a + b + 100;
+
+-----------------------------------------------------------------------------------------------------
+
+// Función tradicional
+function (a, b){
+  let chuck = 42;
+  return a + b + chuck;
+}
+
+// Función flecha
+(a, b) => {
+  let chuck = 42;
+  return a + b + chuck;
+}
+
+-----------------------------------------------------------------------------------------------------
+
+// Función tradicional
+function bob (a){
+  return a + 100;
+}
+
+// Función flecha
+let bob = a => a + 100;
+

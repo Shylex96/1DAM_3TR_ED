@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body id="background" style="background-color: #000">
+    <h1 style="text-align: center; color: #fff" id="borrarCargando">Cargando...</h1>
+    <h1 style="text-align: center; color: #fff" id="redireccionanding">Redireccionando..</h1>
+    <script>
+    window.onload = function () {
+        document.getElementById("redireccionanding").style.display = "none";
+
+        setTimeout(function () {
+            document.getElementById("borrarCargando").remove();
+        }, 2000);
+    };
+
+    setTimeout(function () {
+        mostrar();
+    }, 2100);
+
+      // let loadingText = "50%vw";
+      // document.write("<h1>Cargando...</h1>")
+      // let background = document.getElementById("background");
+
+    setTimeout(function () {
+        document.getElementById("redireccionanding").style.display = "block";
+        document.body.style.backgroundColor = "#000"; // morado
+
+    setTimeout(function () {
+        window.location.href = "miniProgram6_part2.html";
+        }, 2500);
+    }, 5000);
+
+    function mostrar() {
+        //window.addEventListener('Enter')
+
+        let helloCurrentUser = alert("¡Hola, mi nombre es Esteban!");
+        let currentUserName = prompt("y tú, ¿cómo te llamas?:");
+        let welcomeCurrentUser = alert(`¡Es un placer conocerte ${currentUserName}!`);
+        let welcomeText = alert("Sólo quería decirte que espero disfrutes de la página.");
+        ["Aquí encontrarás contenido de ayuda en lo que a la programación se refiere.","Pero sobre todo se verá JavaScript.",].forEach(alert);
+        let currentUserAge = prompt("¡Ah, por cierto!, ¿qué edad tienes?");
+        let ageCreator = 26;
+        let currentCreatorAge = alert("Yo, el creador de esta página tengo 26 años (al menos cuando hice esto)");
+        let doYouKnowOurAge = alert(`¿Sabes que tenemos una diferencia de edad de ${ageCreator - currentUserAge} años?`);
+        let letYouEnjoy = alert("Bueno, te dejo disfrutar de la página :)");
+    }
+    </script>
+</body>
+</html>
